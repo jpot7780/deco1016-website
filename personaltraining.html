@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="personaltraining.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root" class="grid-container">
+    <!-- Header -->
+    <header class="header">
+        <img src="powerlogo.png" alt="logo" />
+    </header>
+    <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav">
+                <ul>
+                    <li><a href="home.html">About Us</a></li>
+                    <li><a href="joinus.html">Join Us</a></li>
+                    <li><a href="home.html">Our Classes</a></li>
+                    <li><a href="home.html">Memberships</a></li> 
+                    <li><a href="home.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Slideshow container -->
+        <div class="slideshow">
+            <img class="mySlides" src="joinus.png">
+            <div class="centered">Join the Journey</div>
+        </div>
+      
+        <div class="homeclub">
+            <div class="homeclub1">1. Home Club</div>
+        </div>
+        <div class="membership">
+            <div class="membership1">2. Membership</div>
+        </div>
+        <div class="personaltrainer">
+            <div class="personaltrainer1">3. Personal Trainer</div>
+        </div>
+        <div class="personaldetails">
+            <div class="personaldetails1">4. Personal Details</div>
+        </div>
+        <div class="payment">
+            <div class="personaltrainer1">5. Payment</div>
+        </div>
+        
+   
+        <div class="content">
+            <form>
+                <h3>3. Additional Personal Training Sessions</h3>
+                <br>
+                <p>One on one Personal Training sessions on top of your membership for a cheaper price. If you are not interested click Step 4.</p>
+                <br>
+                <div class="packs">
+                    <input type="radio" id="pack1" name="pack" value="2">
+                    <label for="pack1"> 2 Pack ~ $100</label>
+                    <input type="radio" id="pack2" name="pack" value="6">
+                    <label for="pack2"> 6 Pack ~ $270</label>
+                    <input type="radio" id="pack3" name="pack" value="12">
+                    <label for="pack3"> 12 Pack ~ $480</label>
+                </div>
+                <a class="button" href="./personaldetails.html">Next Page</a>
+            </form>
+        </div>
+    
+
+      
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>@2019 Power Fitness. All rights reserved.</p>
+    </div>
+
+    </div>
+
+    <script>
+        let button = document.getElementById("submit");
+        let form = document.forms[0];
+        console.log(form);
+
+
+        form.addEventListener("change", function(event){
+            event.preventDefault();
+            let pack = form.elements["pack"].value;
+
+            localStorage.setItem("pack", pack);
+            console.log(localStorage.getItem("pack"));
+            console.log("testing")
+        })
+
+        console.log("testing")
+
+    </script>
+
+</body>
+
+</html>

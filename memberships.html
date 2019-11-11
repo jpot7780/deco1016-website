@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="memberships.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root" class="grid-container">
+    <!-- Header -->
+    <header class="header">
+        <img src="powerlogo.png" alt="logo" />
+    </header>
+    <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav">
+                <ul>
+                    <li><a href="home.html">About Us</a></li>
+                    <li><a href="joinus.html">Join Us</a></li>
+                    <li><a href="home.html">Our Classes</a></li>
+                    <li><a href="home.html">Memberships</a></li> 
+                    <li><a href="home.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Slideshow container -->
+        <div class="slideshow">
+            <img class="mySlides" src="joinus.png">
+            <div class="centered">Join the Journey</div>
+        </div>
+      
+        <div class="homeclub">
+            <div class="homeclub1">1. Home Club</div>
+        </div>
+        <div class="membership">
+            <div class="membership1">2. Membership</div>
+        </div>
+        <div class="personaltrainer">
+            <div class="personaltrainer1">3. Personal Trainer</div>
+        </div>
+        <div class="personaldetails">
+            <div class="personaldetails1">4. Personal Details</div>
+        </div>
+        <div class="payment">
+            <div class="personaltrainer1">5. Payment</div>
+        </div>
+        
+   
+        <div class="content">
+            <form>
+                <h3>2. Select Membership Type</h3>
+                <br>
+                <p>If unsure which type of plan you would like to select, head to the membership page for prices and benefits.</p>
+                <br>
+                <div class="memberships">
+                    <select id="membershiptype" name="membershiptype">
+                        <option value="">Select Membership Type</option>
+                        <option value="Membership1">Home</option>
+                        <option value="Membership2">Platinum</option>
+                        <option value="Membership3">Titanium</option>
+                    </select>
+                </div>
+                <a class="button" href="./personaltraining.html">Next Page</a>
+            </form>
+        </div>
+    
+
+      
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>@2019 Power Fitness. All rights reserved.</p>
+    </div>
+
+    </div>
+
+    <script>
+            let button = document.getElementById("submit");
+            let form = document.forms[0];
+            console.log(form);
+    
+    
+            form.addEventListener("change", function(event){
+                event.preventDefault();
+                let membershiptype = form.elements["membershiptype"].value;
+    
+                localStorage.setItem("membershiptype", membershiptype);
+                console.log(localStorage.getItem("membershiptype"));
+                console.log("testing")
+            })
+    
+            console.log("testing")
+    
+        </script>
+</body>
+
+</html>

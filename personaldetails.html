@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="personaldetails.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root" class="grid-container">
+    <!-- Header -->
+    <header class="header">
+        <img src="powerlogo.png" alt="logo" />
+    </header>
+    <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav">
+                <ul>
+                    <li><a href="home.html">About Us</a></li>
+                    <li><a href="joinus.html">Join Us</a></li>
+                    <li><a href="home.html">Our Classes</a></li>
+                    <li><a href="home.html">Memberships</a></li> 
+                    <li><a href="home.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Slideshow container -->
+        <div class="slideshow">
+            <img class="mySlides" src="joinus.png">
+            <div class="centered">Join the Journey</div>
+        </div>
+      
+        <div class="homeclub">
+            <div class="homeclub1">1. Home Club</div>
+        </div>
+        <div class="membership">
+            <div class="membership1">2. Membership</div>
+        </div>
+        <div class="personaltrainer">
+            <div class="personaltrainer1">3. Personal Trainer</div>
+        </div>
+        <div class="personaldetails">
+            <div class="personaldetails1">4. Personal Details</div>
+        </div>
+        <div class="payment">
+            <div class="personaltrainer1">5. Payment</div>
+        </div>
+        
+   
+        <div class="content">
+            <form onsubmit="return validateForm()">
+                <h3>4. Personal Details</h3>
+                <br>
+                <hr>
+                <br>
+                <label for="title">Title</label>
+                <select id="title" name="title">
+                    <option value="">Select Title</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Miss.">Miss.</option>
+                    <option value="Mrs.">Mrs.</option>
+                </select>
+                <br>
+                <br>
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname">
+                <br>
+                <br>
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname">
+                <br>
+                <br>
+                <label for="DOB">Date of Birth</label>
+                <input type="date" name="DOB">
+                <br>
+                <br>
+                <label>Gender</label>
+                <div>
+                    <label for="female">
+                    <input id="female" name="gender" type="radio" value="female"> Female
+                    </label>
+                    <label for="male">
+                    <input checked id="male" name="gender" type="radio" value="male"> Male
+                    </label>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <label for="email">Email</label>
+                <input type="email" name="email">
+                <br>
+                <br>
+                <label for="mobilephone">Mobile Phone</label>
+                <input type="number" name="mobilephone">
+                <br>
+                <br>
+                <label for="homephone">Home Phone</label>
+                <input type="number" name="homephone">
+                <br>
+                <br>
+                <label for="address">Address</label>
+                <input type="text" name="address">
+                <br>
+                <br>
+                <label for="suburb">Suberb</label>
+                <input type="text" name="suburb">
+                <br>
+                <br>
+                <label for="state">State</label>
+                <select id="state" name="state">
+                    <option value="">Select State</option>
+                    <option value="New South Wales">New South Wales</option>
+                    <option value="South Australia">South Australia</option>
+                    <option value="Queensland">Queensland</option>
+                    <option value="Western Australia">Western Australia</option>
+                    <option value="Victoria">Victoria</option>
+                </select>
+                <br>
+                <br>
+                <label for="postcode">Postcode</label>
+                <input type="text" name="postcode">
+                <br>
+                <br>
+                <hr>
+                <br>
+                <label for="emergencycontactname">Emergency Contact Name</label>
+                <input type="text" name="emergencycontactname">
+                <br>
+                <br>
+                <label for="emergencycontactnumber">Emergency Contact Number</label>
+                <input type="text" name="emergencycontactnumber">
+                <br>
+                <br>
+                <hr>
+                <br>
+                <p>I acknowledge I have read and agreed to:</p>
+                <br>
+                <label for="checkbox">
+                    <input id="checkbox" name="checkbox" type="checkbox">Membership Terms & Conditions       
+                </label>
+                <br>
+                <br>
+                <hr>
+
+
+                <a class="button" href="payment.html">Next Page</a>
+            </form>
+        </div>
+    
+
+      
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>@2019 Power Fitness. All rights reserved.</p>
+    </div>
+
+    </div>
+
+    <script>
+
+            let button = document.getElementById("submit");
+            let form = document.forms[0];
+            console.log(form);
+    
+            form.addEventListener("change", function(event){
+                event.preventDefault();
+                let title = form.elements["title"].value;
+                let firstname = form.elements["firstname"].value;
+                let lastname = form.elements["lastname"].value;
+                let DOB = form.elements["DOB"].value;
+                let gender = form.elements["gender"].value;
+    
+                let email = form.elements["email"].value;
+                let mobilephone = form.elements["mobilephone"].value;
+                let homephone = form.elements["homephone"].value;
+                let address = form.elements["address"].value;
+                let suburb = form.elements["suburb"].value;
+                let state = form.elements["state"].value;
+                let postcode = form.elements["postcode"].value;
+    
+                let emergencycontactname = form.elements["emergencycontactname"].value;
+                let emergencycontactnumber = form.elements["emergencycontactnumber"].value;
+    
+                let checkbox = form.elements["checkbox"].value;
+    
+                localStorage.setItem("title", title);
+                localStorage.setItem("firstname", firstname);
+                localStorage.setItem("lastname", lastname);
+                localStorage.setItem("DOB", DOB);
+                localStorage.setItem("gender", gender);
+    
+                localStorage.setItem("email", email);
+                localStorage.setItem("mobilephone", mobilephone);
+                localStorage.setItem("homephone ", homephone);
+                localStorage.setItem("address", address);
+                localStorage.setItem("suburb", suburb);
+                localStorage.setItem("state", state);
+                localStorage.setItem("postcode", postcode);
+    
+                localStorage.setItem("emergencycontactname", emergencycontactname);
+                localStorage.setItem("emergencycontactnumber", emergencycontactnumber);
+    
+                localStorage.setItem("checkbox", checkbox);
+    
+                console.log(localStorage.getItem("title"));
+                console.log(localStorage.getItem("firstname"));
+                console.log(localStorage.getItem("lastname"));
+                console.log(localStorage.getItem("DOB"));
+                console.log(localStorage.getItem("gender"));
+
+                console.log(localStorage.getItem("email"));
+                console.log(localStorage.getItem("mobilephone"));
+                console.log(localStorage.getItem("homephone"));
+                console.log(localStorage.getItem("address"));
+                console.log(localStorage.getItem("suburb"));
+                console.log(localStorage.getItem("state"));
+                console.log(localStorage.getItem("postcode"));
+
+                console.log(localStorage.getItem("emergencycontactname"));
+                console.log(localStorage.getItem("emergencycontactnumber"));
+
+                console.log(localStorage.getItem("checkbox"));
+
+                console.log("testing")
+            })
+    
+            console.log("testing")
+
+            function validateForm() {
+                if (firstname == "") {
+                    alert("Name must be filled out");
+                return false;
+                }
+            }
+
+        </script>
+    
+
+</body>
+
+</html>

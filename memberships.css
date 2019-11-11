@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Dosis', sans-serif;
+    line-height: 1.2;
+    color: #666;
+    background: black;
+  }
+  
+  .header img {
+    display: block;
+    margin: 2rem auto;
+    margin-left: 75px;
+    max-width: 45%;
+  }
+  
+  .slideshow img {
+    max-width:100%;
+    opacity: 0.8;
+  }
+  
+  ul {
+    margin: 50px;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  li {
+    display: inline-block;
+    margin-left: 30px;
+    color: white;
+  }
+  
+  a { 
+    color: white; 
+    text-decoration: none;
+  }
+  
+ 
+  
+  /* -------------------
+  GRID CSS HERE
+  -------------------- */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr 0.20fr 0.5fr 0.5fr;
+    grid-template-areas: "header nav nav nav nav" "slideshow slideshow slideshow slideshow slideshow" "homeclub membership personaltrainer personaldetails payment" "content content content content content" "footer footer footer footer footer";
+  }
+  
+  .footer { 
+    grid-area: footer; 
+    background-color: black;
+    padding-top: 22px;
+    padding-left: 45px;
+  }
+  
+  .content { 
+    grid-area: content; 
+    background-color: #444444;
+    display: flex;
+    text-align: left;
+    position: relative;
+    color: white;
+    padding-top: 22px;
+    padding-left: 45px;
+  }
+  
+  .slideshow { 
+    grid-area: slideshow; 
+    background-color: black;
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+  
+  .header { grid-area: header; }
+  
+  .nav { 
+    grid-area: nav; 
+    text-align: right;
+    font-size: 20px;
+    background-color: black;
+  }
+  
+  .homeclub { 
+    grid-area: homeclub;
+    background-color:  black;
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+  
+  .membership { 
+    grid-area: membership; 
+    background-color: #444444;
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+  
+  .personaltrainer { 
+    grid-area: personaltrainer;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+  
+  .personaldetails { 
+    grid-area: personaldetails;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+  
+  .payment { 
+    grid-area: payment;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+  
+  /* -------------------
+  Slideshow
+  -------------------- */
+  
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+  }
+  
+  /* -------------------
+  bar between slideshow and content
+  -------------------- */
+
+  .homeclub1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+  }
+
+  .membership1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+  }
+
+  .personaltrainer1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+  }
+
+  .personaldetails1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+  }
+
+  .payment1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+  }
+  
+  /* -------------------
+  content form
+  -------------------- */
+
+.memberships{
+  padding-left: 80px;
+}
+
+
+.button {
+    width: 200px;
+    padding: 15px;
+    margin-left: auto;
+    outline: None;
+    background-color: #be0000;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 65%;
+    left: 60%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  
+    transition: 0.4s all;
+  }
+  
+  .button:hover {
+  
+    color: white;
+    background-color: #700000;
+  
+  }

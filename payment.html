@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="payment.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root" class="grid-container">
+    <!-- Header -->
+    <header class="header">
+        <img src="powerlogo.png" alt="logo" />
+    </header>
+    <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav">
+                <ul>
+                    <li><a href="home.html">About Us</a></li>
+                    <li><a href="joinus.html">Join Us</a></li>
+                    <li><a href="home.html">Our Classes</a></li>
+                    <li><a href="home.html">Memberships</a></li> 
+                    <li><a href="home.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Slideshow container -->
+        <div class="slideshow">
+            <img class="mySlides" src="joinus.png">
+            <div class="centered">Join the Journey</div>
+        </div>
+      
+        <div class="homeclub">
+            <div class="homeclub1">1. Home Club</div>
+        </div>
+        <div class="membership">
+            <div class="membership1">2. Membership</div>
+        </div>
+        <div class="personaltrainer">
+            <div class="personaltrainer1">3. Personal Trainer</div>
+        </div>
+        <div class="personaldetails">
+            <div class="personaldetails1">4. Personal Details</div>
+        </div>
+        <div class="payment">
+            <div class="personaltrainer1">5. Payment</div>
+        </div>
+        
+   
+        <div class="content">
+            <form>
+                <h3>5. Payment</h3>
+                <br>
+                <hr>
+                <br>
+                <p><strong>Payment Method</strong></p>
+                <br>
+                <label for="card">
+                    <input id="card" name="card" type="checkbox">VISA/MASTERCARD
+                </label>
+                <br>
+                <br>
+                <label for="creditcardno">Credit Card NO*</label>
+                <input type="text" name="creditcardno">
+                <br>
+                <br>
+                <label for="creditverificationno">Credit Verification NO*</label>
+                <input type="text" name="creditverificationno">
+                <br>
+                <br>
+                <label for="expirationdate">Expiration Date</label>
+                <input type="text" name="expirationdate">
+                <br>
+                <br>
+                <label for="paypal">
+                    <input id="paypal" name="paypal" type="checkbox">PAYPAL
+                </label>
+                <br>
+                <br>
+                <label for="username">Username</label>
+                <input type="text" name="username">
+                <br>
+                <br>
+                <label for="password">Password</label>
+                <input type="text" name="password">
+                <br>
+                <br>
+                <hr>
+                <br>
+                <p><strong>Billing Information</strong></p>
+                <br>
+                <label for="address">Address</label>
+                <input type="text" name="address">
+                <br>
+                <br>
+                <label for="suburb">Suberb</label>
+                <input type="text" name="suburb">
+                <br>
+                <br>
+                <label for="state">State</label>
+                <select id="state" name="state">
+                    <option value="">Select State</option>
+                    <option value="New South Wales">New South Wales</option>
+                    <option value="South Australia">South Australia</option>
+                    <option value="Queensland">Queensland</option>
+                    <option value="Western Australia">Western Australia</option>
+                    <option value="Victoria">Victoria</option>
+                </select>
+                <br>
+                <br>
+                <label for="postcode">Postcode</label>
+                <input type="text" name="postcode">
+                <br>
+                <br>
+                <hr>
+                
+                <a class="button" href="end.html">Finish</a>
+            </form>
+        </div>
+    
+
+      
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>@2019 Power Fitness. All rights reserved.</p>
+    </div>
+
+    </div>
+
+    <script>
+            let button = document.getElementById("submit");
+            let form = document.forms[0];
+            console.log(form);
+    
+    
+            form.addEventListener("change", function(event){
+                event.preventDefault();
+                let card = form.elements["card"].value;
+                let creditcardno = form.elements["creditcardno"].value;
+                let creditverificationno = form.elements["creditverificationno"].value;
+                let expirationdate = form.elements["expirationdate"].value;
+                let paypal = form.elements["paypal"].value;
+                let username = form.elements["username"].value;
+                let password = form.elements["password"].value;
+
+                let address = form.elements["address"].value;
+                let suburb = form.elements["suburb"].value;
+                let state = form.elements["state"].value;
+                let postcode = form.elements["postcode"].value;
+    
+                localStorage.setItem("card", card);
+                localStorage.setItem("creditcardno", creditcardno);
+                localStorage.setItem("creditverificationno", creditverificationno);
+                localStorage.setItem("expirationdate", expirationdate);
+                localStorage.setItem("paypal", paypal);
+                localStorage.setItem("username", username);
+                localStorage.setItem("password", password);
+
+                localStorage.setItem("address", address);
+                localStorage.setItem("suburb", suburb);
+                localStorage.setItem("state", state);
+                localStorage.setItem("postcode", postcode);
+
+                console.log(localStorage.getItem("card"));
+                console.log(localStorage.getItem("creditcardno"));
+                console.log(localStorage.getItem("creditverificationno"));
+                console.log(localStorage.getItem("expirationdate"));
+                console.log(localStorage.getItem("paypal"));
+                console.log(localStorage.getItem("username"));
+                console.log(localStorage.getItem("password"));
+
+                console.log(localStorage.getItem("address"));
+                console.log(localStorage.getItem("suburb"));
+                console.log(localStorage.getItem("state"));
+                console.log(localStorage.getItem("postcode"));
+
+                console.log("testing")
+            })
+    
+            console.log("testing")
+    
+    </script>
+
+</body>
+
+</html>
